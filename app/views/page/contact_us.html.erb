@@ -1,0 +1,111 @@
+<!--begin content-->
+<div class="main-content">
+  <!--begin contact heading-->
+  <div class="contactHeading">
+    <h2>Contact Us</h2>
+
+    <p>Need to get in touch with us. Do you have any questions or concerns, please feel free to
+      contact us. Just fill out our simple form below, call us, or come in.</p>
+
+    <h2>Location</h2>
+    <address>
+      Mama Bears Cake Pops<br>
+      3941 Really Long Street<br>
+      Spokane Wa, 99207 US<br>
+      Phone:(509) 896-9370<br>
+      Fax: (509) 896-6597
+    </address>
+
+  </div>
+  <!--end contactHeading-->
+
+
+  <%= form_tag('/contact_us', class: "contactForm") do %>
+      <span>All fields with a  * are required</span>
+
+      <div class="contactFormContent">
+        <!--begin personal section-->
+        <%= label_tag("first name", "*First name:") %>
+        <%= text_field_tag("first_name", @first_name, placeholder: "First Name", maxlength: 25) %>
+
+        <%= label_tag("last name", "*Last name:") %>
+        <%= text_field_tag("last_name", @last_name, placeholder: "Last name") %>
+
+        <%= label_tag("email", "*Email:") %>
+        <%= email_field_tag("email", @email, placeholder: "Email") %>
+
+        <%= label_tag("phone", "Phone:") %>
+        <%= telephone_field_tag("phone", @phone, placeholder: "xxx-xxx-xxxx") %>
+
+        <div class="preferredContactArea">
+          <h3>Preferred Contact Method</h3>
+
+          <div class="radioButtons">
+            <%= radio_button_tag("contact_me", "email", @contact_me == "email") %>
+            <%= label_tag("contact_email", "Email", class: "radioHeading") %>
+
+          </div>
+
+          <div class="radioButtons">
+            <%= radio_button_tag("contact_me", "phone", @contact_me == "phone") %>
+            <%= label_tag("contact_phone", "Phone", class: "radioHeading") %>
+
+          </div>
+        </div>
+        <!--end preferred contact method-->
+
+        <!--reason for contact-->
+        <div class="contact-reason">
+          <span>Reason for contact?</span>
+          <%= select_tag("contact_reason", options_for_select(@contact_reason, @reason_selected)) %>
+        </div>
+
+        <div class="contact-question">
+          <span>Enter your question:</span>
+          <%= text_area_tag("question", @question, class: "contactus-textarea") %>
+        </div>
+        <br>
+
+        <div class="contactFormCheckBox">
+          <%= check_box_tag("subscribe_newsletter", value = "1", @subscribe_newsletter)%>
+          <!--<input type="checkbox" name="subscribe_newsletter" value="1" id="contactSubscribe"/>-->
+          <%= label_tag("newsletter", "Subscribe to newsletter?")%>
+        </div>
+        <br>
+
+        <div class="contactFormCheckBox">
+          <!-- <input type="checkbox" name="newProductNotify" value="1" id="newProductNotify"/>-->
+          <%= check_box_tag("notify_products", value = "1", @notify_products)%>
+          <%= label_tag("new_products", "Notify me of new products")%>
+        </div>
+        <br>
+
+        <%= submit_tag("Submit", class: "buttons") %>
+      </div>
+  <% end %>
+
+
+
+  <div class="formPost">
+    <% if flash[:notice] %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+    <% end %>
+
+    <% if @commit%>
+        <div class="user-info">
+          <span>First name: <%= @first_name %></span>
+          <span>Last name: <%= @last_name %></span>
+          <span>Email: <%= @email %></span>
+          <span>Phone: <%= @phone %></span>
+          <span>Contact Me: <%= @contact_me %></span>
+          <span>Reason for contact: <%= @reason_selected %></span>
+          <span>Question: <%= @question %></span>
+          <span>Subscribe to newsletter: <%= @subscribe_newsletter %> </span>
+          <span>Notify me of new products: <%= @notify_products %></span>
+        </div>
+    <% end %>
+  </div>
+</div>
+<!--end content-->

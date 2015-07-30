@@ -1,0 +1,163 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$brown: #4e2c22;
+$pink: #f46fec;
+
+.products-table {
+  border: 1px solid $brown;
+  width: 100%;
+}
+
+.products-table caption {
+  padding-bottom: .5em;
+}
+
+.products-table th {
+  border: 1px solid $brown;
+  font-weight: bolder;
+  padding: .578em;
+}
+
+.products-table td {
+  border: 1px solid $brown;
+  padding: .578em;
+}
+
+.products-table a {
+  color: $brown;
+}
+
+.products-table a:hover {
+  color: $pink;
+}
+
+.main-content .new-product {
+  text-align: right;
+  font-weight: bolder;
+  clear: both;
+}
+
+.main-content .new-product a {
+  font-size: 1.25em;
+  padding: 1%;
+  color: $pink;
+  background-color: $brown;
+}
+
+.main-content .new-product a:hover {
+  color: $brown;
+  background-color: $pink;
+}
+
+/*product edit*/
+.main-content .heading {
+  font-size: 2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .5%;
+}
+
+.product-edit input[type="text"] {
+  display: block;
+  border: 0px none;
+  outline: none;
+  width: 250px;
+  height: 30px;
+  line-height: 25px;
+  font-size: 14pt !important;
+  margin: 2px 0 5px 0;
+  padding: 2px 5px !important;
+  -webkit-box-shadow: inset 0px 0px 3px 1px #666;
+  box-shadow: inset 0px 0px 3px 1px #666;
+}
+
+input[type="number"] {
+  display: block;
+  border: 0px none;
+  outline: none;
+  width: 250px;
+  height: 30px;
+  line-height: 25px;
+  font-size: 14pt !important;
+  margin: 2px 0 5px 0;
+  padding: 2px 5px !important;
+  -webkit-box-shadow: inset 0px 0px 3px 1px #666;
+  box-shadow: inset 0px 0px 3px 1px #666;
+}
+
+.product-textarea {
+  width: 85%;
+  height: 5em;
+  margin-top: 5px;
+  -webkit-box-shadow: 0px 0px 3px 1px #666;
+  box-shadow: 0px 0px 3px 1px #666;
+}
+
+.buttons[type="submit"] {
+  display: inline-block;
+  width: 10em;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  background-color: #fff;
+  padding: 5px 10px !important;
+  margin: 25px 5px;
+  font-size: 14px !important;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 3px 1px #666;
+  box-shadow: 0px 0px 3px 1px #666;
+  cursor: pointer;
+}
+
+.product-show-back {
+  float: right;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  clear: both;
+}
+
+.product-show-back a {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.product-details{
+  float: left;
+  width: 50%;
+}
+
+/*product show page*/
+.product-img-full{
+  float: left;
+  border-right: 1px solid #ccc;
+  padding: 0 1% 5% 0;
+  margin: 0 2% 0 0;
+}
+
+.product-name{
+  font-weight: bolder;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 1% 0;
+  margin-bottom: 1%;
+}
+.product-name h2 span{
+  float: right;
+}
+
+.product-description{
+  line-height: 1.5;
+  font-size: 1.25em;
+}
+
+.product-cost, .product-quantity, .product-weight{
+  display: inline;
+  padding: 0 1%;
+  font-weight: bolder;
+}
+
+.product-purchase-details{
+  clear: both;
+  text-align: left;
+  padding-left: 1%;
+}

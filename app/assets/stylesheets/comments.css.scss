@@ -1,0 +1,64 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$brown: #4e2c22;
+$pink: #f46fec;
+
+.comments-wrap{
+  clear: both;
+  border:1px solid #ccc;
+  font-size: 1.25em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.new-comment-wrap{
+  clear: both;
+  padding: 1em;
+  margin: 1em;
+  font-size: 1.25em;
+  border:1px solid #ccc;
+}
+
+.comment-heading{
+  padding-bottom: 1em;
+}
+
+.product-rating {
+  text-align: right;
+  padding-bottom: 1em;
+}
+
+.comment-rating{
+  text-align: right;
+  position: relative;
+  top:-1em;
+}
+
+.comment-published{
+  text-align: right;
+  padding-top: 1em;
+  font-weight: bolder;
+}
+
+.comment-delete{
+  text-align: right;
+}
+
+.rating-select select{
+  padding: .25em 2em .25em .25em;
+  background-color: #eee;
+  background-image: url(heartRatingIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px 1px #666;
+  color: $brown;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

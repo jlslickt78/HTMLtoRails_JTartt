@@ -1,0 +1,49 @@
+<div class="main-content">
+  <h2 class="articles-heading heading">Listing <%= @products.count %> Products</h2>
+  <% if(current_user.try(:admin)) %>
+      <span><%= link_to("Admin Product page", products_path) %></span>
+  <% end %>
+  <table class="products-table">
+    <caption>
+      <div class="top-pagination">
+        <%= paginate @products %>
+      </div>
+    </caption>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Quantity on hand</th>
+      <th>Selling price</th>
+      <th>Shipping weight</th>
+      <th>Img th</th>
+      <th>Rating</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= truncate(product.description) %></td>
+          <td><%= product.quantity_on_hand %></td>
+          <td><%= number_to_currency(product.selling_price) %></td>
+          <td><%= product.shipping_weight %></td>
+          <td><%= image_tag(product.img_th) %></td>
+          <td>
+            <%= hearts(product.comments.average(:rating)) %>
+          </td>
+          <td><%= link_to 'Show', store_show_path(:id => product.id) %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <div class="bottom-pagination">
+    <%= paginate @products %>
+  </div>
+
+</div>
+
+

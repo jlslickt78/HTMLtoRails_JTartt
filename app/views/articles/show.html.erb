@@ -1,0 +1,39 @@
+<div class="main-content">
+  <div class="product-show-page">
+    <p id="notice"><%= notice %></p>
+
+      <div class="article-title article-show-details">
+        <h2 class="heading"><%= @article.article_title %></h2>
+      </div>
+
+      <div class="article-published-date">
+        <cite>published: <%= time_ago_in_words(@article.article_published) %> ago</cite>
+        <% if(current_user.try(:admin?)) %>
+            <span>published?:</span>
+            <%= @article.article_published? %>
+        <% end %>
+      </div>
+
+      <div class="article-content">
+        <%= @article.content %>
+      </div>
+
+      <div class="article-user">
+        <div class="article-avatar">
+          <%= image_tag(@article.article_avatar) %>
+        </div>
+
+        <div class="article-author">
+          <span>by:</span>
+          <%= @article.article_author %>
+        </div>
+      </div>
+
+      <div class="product-show-back">
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %>
+      </div>
+
+  </div>
+</div>
+

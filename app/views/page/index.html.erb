@@ -1,0 +1,112 @@
+<header id="header">
+  <%= image_tag("header.png") %>
+</header>
+
+<!--begin content-->
+<div class="main-content">
+  <!--begin new products feature-->
+
+  <div id="newProducts">
+
+    <div class="new-products-container">
+      <ul>
+        <li>
+          <div>
+            <h3>Muppet Pops</h3>
+            <%= link_to(image_tag("muppets_th.png"), controller: 'products', action: 'show', id:206) %>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Sheep Pops</h3>
+            <%= link_to(image_tag("sheep_th.png"), controller: 'products', action: 'show', id:207) %>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Clown Pops</h3>
+            <%= link_to(image_tag("clown_th.png"), controller: 'products', action: 'show', id:208) %>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Hello Kitty Pops</h3>
+            <%= link_to(image_tag("hellokitty_th.png"), controller: 'products', action: 'show', id:209) %>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <!--begin new products feature-->
+
+  <!--begin lastest blog posts-->
+  <div class="content-posts">
+    <h2><%= link_to("Latest Blog Posts", page_blog_path) %></h2>
+    <ul>
+      <li>
+        <div>
+          <h3><a href="newIdeas.html">Delious New Cake Pop ideas...</a></h3>
+
+          <p>
+            Donec et auctor ante, euismod ullamcorper massa. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Aliquam nibh nulla, scelerisque quis euismod sit amet, congue ac ipsum.
+            Nulla ultrices nulla turpis, ut ullamcorper mi feugiat nec. Duis at gravida justo. Aliquam aliquam diam
+            vel blandit tincidunt. Duis quis ipsum quis arcu euismod ultricies.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <h3><a href="thirtymin.html">Cake Pops in 30 mins...</a></h3>
+
+          <p>
+            Donec et auctor ante, euismod ullamcorper massa. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Aliquam nibh nulla, scelerisque quis euismod sit amet, congue ac ipsum.
+            Nulla ultrices nulla turpis, ut ullamcorper mi feugiat nec. Duis at gravida justo. Aliquam aliquam diam
+            vel blandit tincidunt. Duis quis ipsum quis arcu euismod ultricies.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--end latest blog posts-->
+
+  <!--begin latest articlesTest-->
+  <div class="content-posts">
+    <h2><%= link_to("Articles", articles_path) %></h2>
+    <ul>
+      <li>
+        <div>
+          <h3><a href="holycow.html">Holy cow, this happened!</a></h3>
+
+          <p>
+            Donec et auctor ante, euismod ullamcorper massa. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Aliquam nibh nulla, scelerisque quis euismod sit amet, congue ac ipsum.
+            Nulla ultrices nulla turpis, ut ullamcorper mi feugiat nec. Duis at gravida justo. Aliquam aliquam diam
+            vel blandit tincidunt. Duis quis ipsum quis arcu euismod ultricies.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <h3><a href="checkitout.html">Check it out...</a></h3>
+
+          <p>
+            Donec et auctor ante, euismod ullamcorper massa. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Aliquam nibh nulla, scelerisque quis euismod sit amet, congue ac ipsum.
+            Nulla ultrices nulla turpis, ut ullamcorper mi feugiat nec. Duis at gravida justo. Aliquam aliquam diam
+            vel blandit tincidunt. Duis quis ipsum quis arcu euismod ultricies.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--end latest articlesTest-->
+</div>
+<!--end content-->

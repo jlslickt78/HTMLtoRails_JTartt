@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTMLtoRailsJTarttCIS284</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!--begin top nav-->
+<nav id="main-nav">
+  <%= main_nav %>
+</nav>
+<!--end top nav-->
+
+<!--begin wrapper-->
+<div id="wrapper">
+  <div class="main-content">
+    <div class="login-notice">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  </div>
+
+
+  <%= yield %>
+
+</div>
+<!--end wrapper-->
+
+<!--begin footer nav-->
+<nav id="footer">
+  <%= footer_nav %>
+</nav>
+<!--end footer nav-->
+
+</body>
+</html>

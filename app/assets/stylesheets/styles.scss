@@ -1,0 +1,605 @@
+@charset "utf-8";
+/* CSS Document */
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tr {
+  display: table-row;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+ul, h1, h2, h3, h4, a {
+  text-decoration: none;
+}
+
+/*end css reset*/
+/*begin styles*/
+$brown: #4e2c22;
+$pink: #f46fec;
+
+body {
+  width: 100%;
+  font-family: 'Trebuchet MS', Arial, Verdana, sans-serif;
+  font-size: 1em;
+  color: $brown;
+  z-index: -9999999;
+}
+
+/*begin main nav*/
+#main-nav li a.current {
+  background-color: $brown;
+  color: $pink;
+  box-shadow: 0px 0px 1px 1px $brown;
+}
+
+#main-nav {
+  width: 100%;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: center;
+  background-color: $pink;
+  box-shadow: 0px 3px 5px 0px $brown;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 10px 5px;
+}
+
+#main-nav li {
+  display: inline-block;
+  padding: 2px 3px;
+}
+
+#main-nav li a {
+  color: #4e2c22;
+  padding: 10px;
+}
+
+#main-nav li a:hover {
+  background-color: $brown;
+  color: $pink;
+  box-shadow: 0px 0px 1px 1px $brown;
+}
+
+.nav-login {
+  margin-left: 50px;
+}
+
+/*end main nav*/
+
+#wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  width: percentage(1024/1280);
+  background-color: #eee;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: .25%;
+  font-size: 1.25em;
+  color: $pink;
+}
+
+.breadcrumb-arrow {
+  font-size: 1.525em;
+}
+
+.pagination {
+  width: 100%;
+  text-align: right;
+  font-size: 1.25em;
+}
+
+.pagination > span a {
+  color: $brown;
+}
+
+.pagination > span a:hover {
+  color: $pink;
+}
+
+.pagination .current {
+  color: $pink;
+  font-size: 1.25em;
+}
+
+.bottom-pagination {
+  padding-bottom: 2%;
+}
+
+h2, h2 a {
+  font-size: 1.25em;
+  color: #f46fec;
+  text-shadow: 0 0 1px $brown, 1px 2px 3px #000;
+}
+
+h3, h3 a {
+  color: #4e2c22;
+  text-shadow: 0px 1px 2px $brown;
+}
+
+.textbox{
+  display: block;
+  border: 0px none;
+  outline: none;
+  width: 250px;
+  height: 30px;
+  line-height: 25px;
+  font-size: 14pt !important;
+  margin: 2px 0 5px 0;
+  padding: 2px 5px !important;
+  -webkit-box-shadow: inset 0px 0px 3px 1px #666;
+  box-shadow: inset 0px 0px 3px 1px #666;
+}
+
+#header {
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+#header img {
+  width: 100%;
+}
+
+@media all and (min-width: 960px) {
+  #header img {
+    width: 50%;
+  }
+}
+
+/*begin content*/
+.main-content {
+  width: percentage(1024/1280);
+  margin: 4em auto;
+}
+
+/*end content*/
+
+/*home page new products*/
+#newProducts {
+  width: 100%;
+}
+
+.new-products-container {
+  padding: 2% 0 0 0;
+}
+
+#newProducts ul {
+  list-style: none;
+  padding: 5px 0;
+  text-align: center;
+}
+
+#newProducts li {
+  display: inline-block;
+  /*  padding: 5px 5px 5px;*/
+  padding: 0 2%;
+}
+
+#newProducts h2 {
+  padding-bottom: 15px;
+}
+
+#newProducts h3 {
+  padding-bottom: 10px;
+}
+
+#newProducts img {
+  width: 100%;
+}
+
+/*end home page new products*/
+
+/*begin lastest blog posts*/
+.content-posts {
+  width: 100%;
+}
+
+.content-posts h2 {
+  margin-top: 50px;
+}
+
+.content-posts h3 {
+  margin-bottom: 10px;
+}
+
+.content-posts div {
+  padding: 25px 15px;
+  margin: 20px 0;
+  border: 1px solid $pink;
+  box-shadow: 0px 0px 3px 2px $brown;
+}
+
+/*end latest blog posts*/
+
+/*begin latest atricles*/
+/*end latest articlesTest*/
+
+/*begin footer*/
+#footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+}
+
+#footer ul {
+  list-style: none;
+  background-color: $pink;
+  padding: 10px 15px;
+}
+
+#footer li {
+  display: inline;
+  padding: 10px;
+}
+
+#footer li a {
+  color: $brown;
+  padding: 10px;
+}
+
+#footer li a:hover {
+  background-color: $brown;
+  color: #f46fec;
+  box-shadow: 0px 0px 3px 2px $brown;
+}
+
+/*end footer*/
+
+/*begin login page*/
+.user-signed-in {
+  color: blue;
+}
+
+.main-content .login-page-heading .heading{
+  margin-bottom: 100px;
+}
+
+.login-page {
+  padding: 5%;
+  border: 1px solid $pink;
+  box-shadow: 0px 0px 3px 2px $brown;
+}
+
+.login-page input[type="email"], .login-page [type="password"] {
+  display: block;
+  border: 0px none;
+  outline: none;
+  margin: 5px 0;
+  font-size: 17pt !important;
+  padding: 2px 5px !important;
+  box-shadow: inset 0px 0px 3px 1px #666;
+}
+
+.login-page input[type="submit"] {
+  width: 100px;
+  border: 2px solid #eee;
+  background-color: #fff;
+  padding: 5px 10px !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+  left: 140px;
+  box-shadow: 0px 0px 3px 1px #666;
+  cursor: pointer;
+}
+
+.login-page form {
+  width: 50%;
+}
+
+.login-helpers {
+  padding: 2%;
+  float: left;
+}
+
+.f-password-submit input[type="submit"] {
+  position: relative;
+  left: -15px;
+  width: 55%;
+}
+.login-notice{
+  text-align: right;
+  padding: 0 15%;
+}
+/*end login page*/
+
+/*begin calendar*/
+.calendar {
+  width: 100%;
+  color: $brown;
+  margin: 5% 0;
+}
+
+.cal-table {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid $brown;
+  box-shadow: 0 0 5px 1px $brown;
+}
+
+.cal-caption {
+  clear: both;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 2%;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.prev_month, .next_month {
+  color: $brown;
+  font-size: .5em;
+  margin-top: 2%;
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.prev_month {
+  float: left;
+}
+
+.prev_month:hover {
+  color: $pink;
+}
+
+.next_month {
+  float: right;
+}
+
+.next_month:hover {
+  color: $pink;
+}
+
+.cal-heading-row {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.cal-heading-row th {
+  border: 1px solid $brown;
+  padding: 5px 15px;
+}
+
+.cal-cell {
+  border: 1px solid $brown;
+  padding: 100px 10px 10px 0;
+  text-align: right;
+  background-color: #eee;
+}
+
+.cal-active:hover {
+  background-color: #fff;
+  color: $brown;
+  -webkit-box-shadow: 0 0 5px 2px #666;
+  //box-shadow: 0 0 5px 2px #666;
+  box-shadow: 0 0 2px 2px $pink;
+}
+
+/*end calendar*/
+
+/*begin blogs page*/
+.article {
+  width: 100%;
+}
+
+.article .headline {
+  padding-bottom: 10px;
+}
+
+.article .newsItem {
+  margin-bottom: 5px;
+}
+
+.article h4 {
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.article ul li {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #f46fec;
+  box-shadow: 0px 0px 3px 2px #4e2c22;
+}
+
+.pastArticles {
+  margin: 40px 0;
+}
+
+.pastPostsDate {
+  text-align: right;
+}
+
+.blogPage {
+  margin-top: 15px;
+}
+
+/*end blogs page*/
+
+/*contact us*/
+.notice {
+  color: #B00100;
+  margin-bottom: 20px;
+  font-size: 14pt !important;
+}
+
+.user-info span {
+  display: table;
+  font-size: 14pt !important;
+  padding: 5px 0;
+}
+
+.contactHeading {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contactHeading h2 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.contactForm {
+  float: left;
+  width: 50%;
+  margin: 50px 0;
+}
+
+.formPost {
+  float: left;
+  width: 40%;
+  margin: 50px 0;
+}
+
+.contactFormContent {
+  padding-top: 20px;
+  color: $brown;
+  text-shadow: 0px 1px 2px $brown;
+}
+
+.contactForm input[type="text"], .contactForm [type="email"], .contactForm [type="tel"] {
+  display: block;
+  border: 0px none;
+  outline: none;
+  width: 250px;
+  height: 30px;
+  line-height: 25px;
+  font-size: 14pt !important;
+  margin: 2px 0 5px 0;
+  padding: 2px 5px !important;
+  -webkit-box-shadow: inset 0px 0px 3px 1px #666;
+  box-shadow: inset 0px 0px 3px 1px #666;
+}
+
+.contactForm .buttons[type="submit"], [type="reset"] {
+  display: inline-block;
+  width: 100px;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  background-color: #fff;
+  padding: 5px 10px !important;
+  margin: 25px 5px;
+  font-size: 14px !important;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 3px 1px #666;
+  box-shadow: 0px 0px 3px 1px #666;
+  cursor: pointer;
+}
+
+/*begin preferred contact area*/
+.preferredContactArea {
+  margin-bottom: 20px;
+}
+
+.preferredContactArea .radioHeading {
+  display: inline-block;
+  margin-right: 10px;
+  color: $brown;
+  text-shadow: 0px 1px 2px $brown;
+}
+
+.preferredContactArea .radioButtons {
+  display: inline-block;
+  position: relative;
+  right: 5px;
+}
+
+/*end radio button styles*/
+
+/*begin dropdown styles*/
+.contact-reason {
+  margin-bottom: 20px;
+}
+
+.contactus-textarea {
+  width: 85%;
+  height: 5em;
+  margin-top: 5px;
+  -webkit-box-shadow: 0px 0px 3px 1px #666;
+  box-shadow: 0px 0px 3px 1px #666;
+}
+
+/*End contact us*/
+
+/*begin about us*/
+#aboutus {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#aboutus h2 {
+  padding-top: 50px;
+}
+
+/*end about us*/

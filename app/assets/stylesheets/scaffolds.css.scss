@@ -1,0 +1,67 @@
+$brown: #4e2c22;
+$pink: #f46fec;
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+}
+
+#error_explanation {
+  width: 450px;
+  padding: 7px;
+  padding: 1%;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 5px 2px red;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style:square;
+    padding: 2% 0;
+    margin: 1% 0 0 2%;
+  }
+  .fix-errors{
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: red;
+    margin-top: 4%;
+  }
+}

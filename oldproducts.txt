@@ -1,0 +1,81 @@
+<!--begin content container-->
+<div id="content">
+  <div id="product-container">
+    <!--product 1-->
+    <div class="productContainer">
+      <div class="picContainer picContainer-first">
+        <%= image_tag("muppets_med.png", alt: "Muppet Pops") %>
+
+        <div class="mask">
+          <h2>Muppet Pops</h2><!--name-->
+
+          <p>Ever wanted to eat a muppet head!</p><!--description-->
+          <%= link_to("Check it out!", page_muppet_pops_path, class: "info") %>
+
+        </div>
+        <!--end mask-->
+      </div>
+      <h2>Price: $5,200</h2><!--price-->
+    </div>
+    <!--end picture container-->
+    <!--end product 1-->
+
+    <!--product 2-->
+    <div class="productContainer">
+      <div class="picContainer picContainer-first">
+        <%= image_tag("sheep_med.png", alt: "Sheep Pops") %>
+
+        <div class="mask">
+          <h2>Sheep Pops</h2><!--name-->
+
+          <p>Count sheep, right into your mouth.</p><!--description-->
+          <%= link_to("Check it out!", page_sheep_pops_path, class: "info") %>
+
+        </div>
+        <!--end mask-->
+      </div>
+      <h2>Price: $29.99</h2><!--price-->
+    </div>
+    <!--end picture container-->
+    <!--end product 2-->
+
+    <!--product 3-->
+    <div class="productContainer">
+      <div class="picContainer picContainer-first">
+        <%= image_tag("clown_med.png", alt: "Clown Pops") %>
+
+        <div class="mask">
+          <h2>Clown Pops</h2><!--name-->
+
+          <p>Have a big smile while you chomp these guys.</p><!--description-->
+          <%= link_to("Check it out!", page_clown_pops_path, class: "info") %>
+
+        </div>
+        <!--end mask-->
+      </div>
+      <h2>Price: $150.00</h2><!--price-->
+    </div>
+    <!--end picture container-->
+    <!--end product 3-->
+
+    <!--product 4-->
+    <div class="productContainer">
+      <div class="picContainer picContainer-first">
+        <%= image_tag("hellokitty_med.png", alt: "Hello Kitty Pops") %>
+
+        <div class="mask">
+          <h2>Hello Kitty Pops</h2><!--name-->
+
+          <p>Cute little Hello Kitty pops.</p><!--description-->
+          <%= link_to("Check it out!", page_hellokitty_pops_path, class: "info") %>
+
+        </div>
+        <!--end mask-->
+      </div>
+      <h2>Price: $3,000</h2><!--price-->
+    </div>
+    <!--end picture container-->
+    <!--end product 4-->
+  </div>
+</div>
+<!--end content container-->

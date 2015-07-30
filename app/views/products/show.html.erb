@@ -1,0 +1,112 @@
+<div class="main-content">
+  <div class="product-show-page">
+    <p id="notice"><%= notice %></p>
+
+    <div class="product-img-full">
+      <%= image_tag(@product.image_full) %>
+    </div>
+
+    <div class="product-details">
+      <div class="product-name">
+        <h2>
+          <%= @product.name %>
+          <span>$<%= @product.selling_price %></span>
+        </h2>
+      </div>
+
+      <div class="product-rating">
+        <!--<p>Average Rating:<%= @product.comments.average(:rating) %></p>-->
+        <span>Rating: </span><%= hearts(@product.comments.average(:rating)).html_safe %>
+      </div>
+
+      <div class="product-description">
+        <%= @product.description %>
+      </div>
+    </div>
+
+    <div class="product-purchase-details">
+
+      <div class="product-cost">
+        <span>Our cost:</span>
+        <span>$</span><%= @product.product_cost %>
+      </div>
+
+      <div class="product-quantity">
+        <span>qty:</span>
+        <%= @product.quantity_on_hand %>
+      </div>
+
+      <div class="product-weight">
+        <span>weight:</span>
+        <%= @product.shipping_weight %>
+      </div>
+    </div>
+
+    <% if (current_user.try(:admin)) %>
+        <div class="product-show-back">
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+    <% end %>
+    <%= link_to 'Back', products_path %>
+    </div>
+
+    <% @product.comments.each do |comment| %>
+        <div class="comments-wrap">
+          <h3 class="comment-heading">
+            <%= comment.author %>
+            <div class="comment-rating">
+              <%= hearts(comment.rating.to_i) %>
+            </div>
+          </h3>
+
+
+          <div class="comment-content">
+            <p>
+              <%= comment.opinion %>
+            </p>
+          </div>
+
+          <div class="comment-published">
+            <span>&rarr;<%= time_ago_in_words(comment.created_at) %> ago</span>
+          </div>
+
+          <div class="comment-delete">
+            <%= link_to 'Remove', product_comment_path(@product, comment), method: :delete, data: {confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+    <% end %>
+
+    <%= form_for([@product, @product.comments.build]) do |f| %>
+
+        <div class="new-comment-wrap">
+          <%= f.hidden_field :product_id, class: "textbox" %>
+
+          <div class="field">
+            <%= f.label :author %>
+            <br>
+            <%= f.text_field :author, class: "textbox" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :opinion %>
+            <br>
+            <%= f.text_area :opinion, class: "contactus-textarea" %>
+          </div>
+
+          <div class="field rating-select">
+            <%= f.label :rating %>
+            <br>
+            <%= f.select :rating, options_for_select(1..10) %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit class: "buttons" %>
+          </div>
+        </div>
+    <% end %>
+
+  </div>
+  <!--End show page-->
+
+
+</div>
+<!--End main-content-->
